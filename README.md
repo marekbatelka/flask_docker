@@ -1,13 +1,13 @@
-# Build image
+Simplest Alpine based python docker image running Flask in docker
 
-sudo docker build -t flask:latest .
+# Build image
+> sudo docker build -t flask:latest .
 
 # Run container
-sudo docker run -d -p 5000:5000 flask
+> sudo docker run -d -p 5000:5000 flask
 
 # check
-sudo docker ps
+> sudo docker ps
 
 # logs 
-sudo docker logs <container ID>
-
+> sudo docker logs <container ID>
