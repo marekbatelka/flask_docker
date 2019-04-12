@@ -1,13 +1,9 @@
 FROM python:3.7.3-alpine
 
-WORKDIR /app
+COPY requirements.txt /app/requirements.txt
 
-COPY ./requirements.txt /app/requirements.txt
-
-RUN pip install -r requirements.txt
+RUN pip install -r /app/requirements.txt
 
 COPY . /app
 
-ENTRYPOINT [ "python" ]
-
-CMD [ "hello.py" ]
+CMD python /app/hello.py
